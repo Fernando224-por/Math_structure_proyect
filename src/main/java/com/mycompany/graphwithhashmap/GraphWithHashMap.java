@@ -28,7 +28,7 @@ public class GraphWithHashMap {
             for (JsonNode ubicacion : ubicaciones) {
                 String from = ubicacion.get("from").asText();
                 String to = ubicacion.get("to").asText();
-                int weight = ubicacion.get("weight").asInt();
+                Double weight = ubicacion.get("weight").asDouble();
                 
                 g.addEdges(from, to, weight);
                 
