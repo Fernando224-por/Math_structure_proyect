@@ -1,0 +1,1 @@
+{"Puntos": [{"from": "A", "to": "B","weight": 4}, {"from": "A", "to": "C","weight": 2}, {"from": "B", "to": "E","weight": 3}, {"from": "C", "to": "D","weight": 2}, {"from": "C", "to": "F", "weight": 4}, {"from": "D", "to": "F","weight": 1}, {"from": "E", "to": "G", "weight": 2}, {"from": "F", "to": "G","weight": 1}]}
