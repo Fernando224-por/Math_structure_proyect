@@ -16,12 +16,12 @@ import java.util.Collections;
  * @author andfe
  */
 public class simpleGraph {
-    private Map<String, Map<String, Integer>> graph = new HashMap<>();
+    private Map<String, Map<String, Double>> graph = new HashMap<>();
     public void addNodes(String node) {
         graph.putIfAbsent(node, new HashMap<>());
     }
     
-    public void addEdges (String from, String to, int weight) {
+    public void addEdges (String from, String to, Double weight) {
         graph.putIfAbsent(to, new HashMap<>());
         graph.putIfAbsent(from, new HashMap<>());
         
@@ -37,26 +37,26 @@ public class simpleGraph {
     
     static class Node {
         String name;
-        int priority;
+        Double priority;
 
-        Node(String name, int priority) {
+        Node(String name, Double priority) {
             this.name = name;
             this.priority = priority;
         }        
     }
     
     public PathResult findShortestPath (String startNode, String finalNode) {
-        Map<String, Integer> distance = new HashMap<>();
+        Map<String, Double> distance = new HashMap<>();
         Map<String, String> previus = new HashMap<>();
-        PriorityQueue<Node> queue = new PriorityQueue<>(Comparator.comparingInt(n -> n.priority));
+        PriorityQueue<Node> queue = new PriorityQueue<>(Comparator.comparingDouble(n -> n.priority));
         
         for (String node: graph.keySet()) {
             if (node.equals(startNode)) {
-                distance.put(node, 0);
-                queue.add(new Node(node, 0));
+                distance.put(node, 0.0);
+                queue.add(new Node(node, 0.0));
             } else {
-                distance.put(node, Integer.MAX_VALUE);
-                queue.add(new Node( node, Integer.MAX_VALUE));
+                distance.put(node, Double.MAX_VALUE);
+                queue.add(new Node( node, Double.MAX_VALUE));
             }
             previus.put(node, null);
         }
@@ -74,11 +74,11 @@ public class simpleGraph {
                 }
                 return new PathResult(path, distance.get(finalNode));
             }
-            if (distance.get(CurrentNode) == Integer.MAX_VALUE) break;
+            if (distance.get(CurrentNode) == Double.MAX_VALUE) break;
             
-            for (Map.Entry<String, Integer> neighbor : graph.get(CurrentNode). entrySet()) {
+            for (Map.Entry<String, Double> neighbor : graph.get(CurrentNode). entrySet()) {
                 String neighborNode = neighbor.getKey();
-                int newDist = distance.get(CurrentNode) + neighbor.getValue();
+                Double newDist = (Double) (distance.get(CurrentNode) + neighbor.getValue());
                 
                 if (newDist < distance.get(neighborNode)) {
                     distance.put(neighborNode, newDist);
@@ -87,15 +87,15 @@ public class simpleGraph {
                 }
             }
         }
-        return new PathResult(Collections.EMPTY_LIST, Integer.MAX_VALUE);
+        return new PathResult(Collections.EMPTY_LIST, Double.MAX_VALUE);
         
     }    
     
     static class PathResult {
         List<String> path;
-        int distance;
+        Double distance;
 
-        PathResult(List<String> path, int distance) {
+        PathResult(List<String> path, Double distance) {
             this.path = path;
             this.distance = distance;
         }
