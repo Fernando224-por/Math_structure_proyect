@@ -39,14 +39,9 @@ public class GraphWithHashMap {
             System.out.println("El archivo no existe");
         }
         
-        simpleGraph.PathResult resultTestOne = g.findShortestPath("A", "G");
+        simpleGraph.PathResult resultTestOne = g.findShortestPath("Casa", "Konrad_lorenz");
+        System.out.println("El camino mas corto posible es: ");
         System.out.println(resultTestOne);
-        
-        simpleGraph.PathResult resultTestTwo = g.findShortestPath("B", "D");
-        System.out.println(resultTestTwo);
-        
-        simpleGraph.PathResult resultTestThree = g.findShortestPath("C", "F");
-        System.out.println(resultTestThree);
         
     }
 }
