@@ -1,44 +1,79 @@
 {
-    "Puntos":[
-       {
-          "from":"A",
-          "to":"B",
-          "weight":4
-       },
-       {
-          "from":"A",
-          "to":"C",
-          "weight":2
-       },
-       {
-          "from":"B",
-          "to":"E",
-          "weight":3
-       },
-       {
-          "from":"C",
-          "to":"D",
-          "weight":2
-       },
-       {
-          "from":"C",
-          "to":"F",
-          "weight":4
-       },
-       {
-          "from":"D",
-          "to":"F",
-          "weight":1
-       },
-       {
-          "from":"E",
-          "to":"G",
-          "weight":2
-       },
-       {
-          "from":"F",
-          "to":"G",
-          "weight":1
-       }
-    ]
- }
+   "Puntos": [
+      {
+         "from": "Casa",
+         "to": "Portal_Usme",
+         "weight": 0.55
+      },
+      {
+         "from": "Portal_Usme",
+         "to": "Calle_57",
+         "weight": 15.75
+      },
+      {
+         "from": "Calle_57",
+         "to": "Konrad_lorenz",
+         "weight": 1.0
+      },
+      {
+         "from": "Calle_57",
+         "to": "Av_Jimenez",
+         "weight": 6.26
+      },
+      {
+         "from": "Portal_Usme",
+         "to": "Calle_76",
+         "weight": 17.95
+      },
+      {
+         "from": "Calle_76",
+         "to": "Konrad_lorenz",
+         "weight": 2.1
+      },
+      {
+         "from": "Portal_Usme",
+         "to": "Av_Jimenez",
+         "weight": 10.89
+      },
+      {
+         "from": "Av_Jimenez",
+         "to": "Calle_76",
+         "weight": 7.86
+      },
+      {
+         "from": "Av_Jimenez",
+         "to": "Flores",
+         "weight": 6.86
+      },
+      {
+         "from": "Flores",
+         "to": "Konrad_lorenz",
+         "weight": 0.95
+      },
+      {
+         "from": "Portal_Usme",
+         "to": "Museo_Nacional",
+         "weight": 13.02
+      },
+      {
+         "from": "Museo_Nacional",
+         "to": "AK_7_CL_61",
+         "weight": 3.54
+      },
+      {
+         "from": "AK_7_CL_61",
+         "to": "Konrad_lorenz",
+         "weight": 0.3
+      },
+      {
+         "from": "Portal_Usme",
+         "to": "1ra_Mayo",
+         "weight": 9.11
+      },
+      {
+         "from": "1ra_Mayo",
+         "to": "AK_7_CL_61",
+         "weight": 8.63
+      }
+   ]
+}
